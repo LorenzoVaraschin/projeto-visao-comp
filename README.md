@@ -33,7 +33,7 @@ from data import make_dataloaders
 
 device = 0 # cpu ou número da GPU
 
-# carregar o modelos e seu checkpoint
+# carregar o modelo e seu checkpoint
 model = PredFormer.load_from_checkpoint(
   "path/to/checkpoint",
   map_location=f"cuda:{device}" if isinstance(device, int) else device,
@@ -45,6 +45,7 @@ batch = next(iter(test_dataloader))
 # obter as saidas do modelo com o método sample()
 outs_ = model.sample(batch, 0)
 ```
+# Dataset
 
 Infelizmente o dataset não pode ser compartilhado sem autorização, porém ele poder ser facilmente solicitado pelo [link](https://sirta.ipsl.fr/data-request/).
 
