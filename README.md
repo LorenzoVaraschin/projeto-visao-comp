@@ -42,6 +42,8 @@ model = PredFormer.load_from_checkpoint(
 # criar os data loaders
 train_dataloader, val_dataloader, test_dataloader = make_dataloaders(batch_size=16)
 batch = next(iter(test_dataloader))
+# obter as saidas do modelo com o método sample()
 outs_ = model.sample(batch, 0)
 ```
 
+Infelizmente o dataset não pode ser compartilhado sem autorização, porém ele poder ser facilmente solicitado pelo [link](https://sirta.ipsl.fr/data-request/).
