@@ -50,6 +50,7 @@ Infelizmente o dataset não pode ser compartilhado sem autorização, porém ele
 
 # Treinamento
 
+```bash
 python train.py \
   --h 8 \
   --d_model 256 \
@@ -70,4 +71,4 @@ python train.py \
   --accumulate_grad_batches 1 \
   --log_run \
   --device 0
-
+```
