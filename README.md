@@ -2,7 +2,7 @@
 
 Projeto da disciplina INE410121 - Visão Computacional da Universidade Federal de Santa Catarina (UFSC), ministrada pelo Prof. Dr. Aldo Von Wangenheim.
 
-# Instalação 
+# Requirements 
 Usando a imagem `Lapix` do VLAB, basta instalar os seguintes pacotes
 ```bash
 $ pip install lightning
