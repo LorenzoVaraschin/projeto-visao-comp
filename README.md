@@ -47,3 +47,27 @@ outs_ = model.sample(batch, 0)
 ```
 
 Infelizmente o dataset não pode ser compartilhado sem autorização, porém ele poder ser facilmente solicitado pelo [link](https://sirta.ipsl.fr/data-request/).
+
+# Treinamento
+
+python train.py \
+  --h 8 \
+  --d_model 256 \
+  --d_hidden 1024 \
+  --N 24 \
+  --patch_size 16 \
+  --image_size 128 \
+  --dropout 0.1 \
+  --learning_rate 0.001 \
+  --num_frames 9 \
+  --attn_type space_time \
+  --lr_scheduler one_cycle \
+  --transformer_type decoder_only \
+  --autoencoder_type linear \
+  --batch_size 16 \
+  --accelerator cuda \
+  --max_epochs 20 \
+  --accumulate_grad_batches 1 \
+  --log_run \
+  --device 0
+
